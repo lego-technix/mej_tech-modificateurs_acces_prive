@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Présentation</title>
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css"/>
+
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/beige.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/blood.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/league.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/moon.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/night.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/serif.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/simple.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/sky.css"/> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/solarized.css"/> -->
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css"/>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css"/>
+
+    <style type="text/css" media="all">
+      body {
+      background: #add9e4;
+      background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
+      background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+      background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+      background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+      background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+      background-color: #f7fbfc;
+      }
+
+      .reveal section img {
+      border: none;
+      }
+
+      .reveal h1 {
+      /* Original */
+      /*font-size: 2.5em;*/
+      /* Custom: smaller */
+      font-size: 1.8em;
+      }
+
+      .reveal h2 {
+      /* Original */
+      /*font-size: 1.6em;*/
+      /* Custom: smaller */
+      font-size: 1.2em;
+      }
+
+      .reveal h3 {
+      /* Original */
+      /*font-size: 1.55em;*/
+      /* Custom: smaller */
+      font-size: 1em;
+      }
+
+      .good {
+      color: green;
+      }
+      .bad {
+      color: red;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="source.md" data-separator-vertical="^\n----\n$"
+                 data-transition="convex">
+        </section>
+      </div>
+    </div>
+    <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script src="node_modules/reveal.js/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+          // The "normal" size of the presentation, aspect ratio will be preserved
+          // when the presentation is scaled to fit different resolutions. Can be
+          // specified using percentage units.
+          //width: 960,
+          //height: 700,
+          width: 1600,
+          height: 864,
+
+          // Factor of the display size that should remain empty around the content
+          margin: 0.1,
+
+          // Bounds for smallest/largest possible scale to apply to content
+          minScale: 0.2,
+          maxScale: 1.5,
+
+          history: true,
+
+          // Display the page number of the current slide
+          slideNumber: true,
+
+          // Display a presentation progress bar
+          progress: true,
+              dependencies: [
+                  { src: 'node_modules/reveal.js/plugin/markdown/marked.js' },
+                  { src: 'node_modules/reveal.js/plugin/markdown/markdown.js' },
+                  { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true },
+                  { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+              ]
+      });
+    </script>
+  </body>
+</html>

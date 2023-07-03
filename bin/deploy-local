@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Use this script to deploy and test on local system.
+# This script is not needed to deploy on GitLab, GitHub, etc.
+# or any forge platform page system. It is just for local use.
+
+# Exit on error
+set -o errexit
+
+cwd="$(pwd)"
+
+dir_path=$(dirname "$0")
+echo "dir_path: $dir_path"
+cd "$dir_path/.."
+project_name=$(basename "$(pwd)")
+project_path=/usr/local/www/pix/"$project_name"
+
+treereadable() {
+  chmod -R a+r "$1"
+  find "$1" -type d -print0 | xargs -0 chmod a+x
+}
+
+echo "$dir_path"
+echo "$project_name"
+
+treereadable "$dir_path"
+
+rsync -a --cvs-exclude --progress "$dir_path/.." "$project_path"
+
+treereadable "$project_path"
+
+cd "$cwd"
